@@ -2,10 +2,12 @@ package com.adoyo.sections
 
 import androidx.compose.runtime.Composable
 import com.adoyo.components.Header
+import com.adoyo.components.SocialBar
 import com.adoyo.util.Constants.MAX_WIDTH
 import com.adoyo.util.Res
 import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.foundation.layout.Box
+import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
@@ -21,7 +23,7 @@ fun MainSection() {
         contentAlignment = Alignment.TopCenter
     ) {
         MainBackground()
-        Header()
+        MainContent()
     }
 }
 
@@ -32,4 +34,15 @@ fun MainBackground() {
         desc = "background image",
         modifier = Modifier.fillMaxSize().objectFit(ObjectFit.Cover)
     )
+}
+
+@Composable
+fun MainContent() {
+    Column(
+        modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Header()
+        SocialBar()
+    }
+
 }

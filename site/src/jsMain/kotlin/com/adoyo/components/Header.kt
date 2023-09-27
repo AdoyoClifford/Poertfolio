@@ -30,7 +30,7 @@ fun Header() {
     Row(
         modifier = Modifier.fillMaxWidth(if (breakpoint > Breakpoint.MD) 80.percent else 90.percent)
             .padding(topBottom = 50.px),
-        horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically
+        horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically
     ) {
         LeftSide(breakpoint = breakpoint)
         if (breakpoint > Breakpoint.MD) {
@@ -41,10 +41,10 @@ fun Header() {
 
 @Composable
 fun LeftSide(breakpoint: Breakpoint) {
-    if (breakpoint <= Breakpoint.MD) {
-        FaBars()
-    }
-    Row {
+    Row (verticalAlignment = Alignment.CenterVertically){
+        if (breakpoint <= Breakpoint.MD) {
+            FaBars(modifier = Modifier.margin(15.px))
+        }
         Image(modifier = LogoStyle.toModifier(), src = Res.Image.logo, desc = "logo")
     }
 }
