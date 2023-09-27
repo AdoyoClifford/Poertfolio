@@ -1,6 +1,7 @@
 package com.adoyo.sections
 
 import androidx.compose.runtime.Composable
+import com.adoyo.components.Header
 import com.adoyo.util.Constants.MAX_WIDTH
 import com.adoyo.util.Res
 import com.varabyte.kobweb.compose.css.ObjectFit
