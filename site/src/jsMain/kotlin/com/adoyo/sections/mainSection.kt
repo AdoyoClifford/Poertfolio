@@ -21,6 +21,7 @@ fun MainSection() {
         contentAlignment = Alignment.TopCenter
     ) {
         MainBackground()
+        Header()
     }
 }
 
