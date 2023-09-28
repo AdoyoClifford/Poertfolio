@@ -26,13 +26,13 @@ fun SocialBar() {
 
 @Composable
 private fun SocialLinks() {
-    Link(path = "") {
+    Link(path = "https://twitter.com/omollo004") {
         FaTwitter(modifier = SocialLinkStyle.toModifier().margin(bottom = 40.px), size = IconSize.LG)
     }
-    Link(path = "") {
+    Link(path = "https://github.com/AdoyoClifford") {
         FaGithub(modifier = SocialLinkStyle.toModifier().margin(bottom = 40.px), size = IconSize.LG)
     }
-    Link(path = "") {
+    Link(path = "https://www.linkedin.com/in/clifford-adoyo-5b4625210/") {
         FaLinkedin(modifier = SocialLinkStyle.toModifier().margin(bottom = 40.px), size = IconSize.LG)
     }
 }
