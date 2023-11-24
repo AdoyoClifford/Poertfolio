@@ -36,13 +36,13 @@ import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun MainSection() {
-    val breakpoint by rememberBreakpoint()
+
     Box(
-        modifier = Modifier.maxWidth(MAX_WIDTH.px),
+        modifier = Modifier.id(Section.Home.id).maxWidth(MAX_WIDTH.px),
         contentAlignment = Alignment.TopCenter
     ) {
         MainBackground()
-        MainContent(breakpoint)
+        MainContent()
     }
 }
 
@@ -56,7 +56,8 @@ fun MainBackground() {
 }
 
 @Composable
-fun MainContent(breakpoint: Breakpoint) {
+fun MainContent() {
+    val breakpoint by rememberBreakpoint()
     Column(
         modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
